@@ -9,7 +9,7 @@
                    # keep track of shopping cart product
                    $count = count ($_SESSION['shopping_cart']);
                    $products_ids = array_column($_SESSION['shopping_cart'], 'BookID');
-                    if (!in_array(filter_input(INPUT_GET, 'id'), $product_ids)) {
+                    if (!in_array(filter_input(INPUT_GET, 'BookID'), $product_ids)) {
                             $_SESSION['shopping_cart'][$count] = array(
 
                                 'BookID' => filter_input(INPUT_GET, 'BookID'),
@@ -17,7 +17,7 @@
                                 'Bcontent' => filter_input(INPUT_POST, 'Bcontent'),
                                 'Price' => filter_input(INPUT_POST, 'Price'),
                                 'quantity' => filter_input(INPUT_POST, 'quantity'),
-                                'Book_image' => filter_input(INPUT_POST, 'Book_image')
+                                'book_image' => filter_input(INPUT_POST, 'book_image')
 
                             );
                     }else {
@@ -35,7 +35,7 @@
                     'Bcontent' => filter_input(INPUT_POST, 'Bcontent'),
                     'Price' => filter_input(INPUT_POST, 'Price'),
                     'quantity' => filter_input(INPUT_POST, 'quantity'),
-                    'Book_image' => filter_input(INPUT_POST, 'Book_image')
+                    'book_image' => filter_input(INPUT_POST, 'book_image')
 
 
                    );

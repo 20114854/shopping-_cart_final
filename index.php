@@ -149,13 +149,11 @@ session_start();
                          <img src="<?php echo $product['book_image'];?>" class="img-fluid px-5 prdimg"  alt="">
                      </div>
                      <h6 class="secondary"><?php echo $product['BookName'];?></h6>
-                     <h4 class="secondary"><?php echo $product['book_image'];?></h4>
                      <h5 class="secondary"><small>R<?php echo $product['Price'];?></h5>
-
                      <input type="number" class="form-control mb-3" name="quantity" value="1">
                      <input type="hidden" name="BookID" value="<?php echo $product['BookID'];?>">
-                     <input type="hidden" name="book_image" value="<?php echo $product['book_image'];?>">
                      <input type="hidden" name="BookName" value="<?php echo $product['BookName'];?>">
+                     <input type="hidden" name="book_image" value="<?php echo $product['book_image'];?>">
                      <input type="hidden" name="Bcontent" value="<?php echo $product['Bcontent'];?>">
                      <input type="hidden" name="Price" value="<?php echo $product['Price'];?>">
                      <button type="submit" name="add_to_cart" class="btn btn-warning">
