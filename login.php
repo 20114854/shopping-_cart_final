@@ -37,7 +37,7 @@
   </head>
   <body class="text-center">
     
-<form action="includes/login_inc.php" class="form-signin" method="post">
+<form class="form-signin" action="includes/login_inc.php"  method="post">
  
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
   <label for="inputStudName"  class="sr-only">Username</label>

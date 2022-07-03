@@ -34,8 +34,9 @@ if (isset($_POST['submit'])) {
               header("Location:../login.php?error=wrongpass");
            }elseif ($passCheck == true) {
               session_start();
-              $_SESSION['sessionId'] = $row ['StudName'];
-              $_SESSION ['sessionUser'] = $row['user'];
+              $_SESSION['sessionId'] = $row ['StudNum'];
+              $_SESSION['sessionUser'] = $row ['StudName'];
+              
               header("Location: ../index.php?success=Loggedin");
            }
         }else {

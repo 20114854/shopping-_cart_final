@@ -21,7 +21,7 @@ require "includes/auth.php";
                                 'Bcontent' => filter_input(INPUT_POST, 'Bcontent'),
                                 'Price' => filter_input(INPUT_POST, 'Price'),
                                 'quantity' => filter_input(INPUT_POST, 'quantity'),
-                                'Book_image' => filter_input(INPUT_POST, 'Book_image')
+                                'book_image' => filter_input(INPUT_POST, 'book_image')
 
                             );
                     }else {
@@ -39,7 +39,7 @@ require "includes/auth.php";
                     'Bcontent' => filter_input(INPUT_POST, 'Bcontent'),
                     'Price' => filter_input(INPUT_POST, 'Price'),
                     'quantity' => filter_input(INPUT_POST, 'quantity'),
-                    'Book_image' => filter_input(INPUT_POST, 'Book_image')
+                    'book_image' => filter_input(INPUT_POST, 'book_image')
 
 
                    );
