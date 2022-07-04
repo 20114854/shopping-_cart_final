@@ -40,12 +40,16 @@
 <form class="form-signin" action="includes/register_inc.php" method="post">
 
   <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
+  <label for="inputStudNum" class="sr-only">Student number</label>
+  <input type="text" id="inputStudNum" name="StudNum" class="form-control mb-2" placeholder="Student number" required autofocus>
   <label for="inputStudName" class="sr-only">Username</label>
   <input type="text" id="inputStudName" name="StudName" class="form-control mb-2" placeholder="Username" required autofocus>
   <label for="inputSPassword" class="sr-only">Password</label>
   <input type="password"  id="inputSPassword" name="SPassword" class="form-control" placeholder="Password" required>
-  <label for="inputSPassword" class="sr-only">Confirm Password</label>
-  <input type="password" id="inputSPassword" name="SConfirmPassword" class="form-control" placeholder=" Confirm Password" >
+  <label for="inputSConfirmPassword" class="sr-only">Confirm Password</label>
+  <input type="password" id="inputSConfirmPassword" name="SConfirmPassword" class="form-control" placeholder=" Confirm Password" >
+  <label for="inputSemail" class="sr-only">Student email</label>
+  <input type="text" id="inputSemail" name="Semail" class="form-control mb-2" placeholder="Student email" required autofocus>
   
   
   <button class="btn btn-lg btn-success btn-block" name="submit" type="submit">Register</button>

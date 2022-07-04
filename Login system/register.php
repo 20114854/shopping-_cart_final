@@ -42,10 +42,10 @@
   <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
   <label for="inputusername" class="sr-only">Username</label>
   <input type="text" id="inputusername" name="username" class="form-control mb-2" placeholder="Username" required autofocus>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password"  id="inputPassword" name="password" class="form-control" placeholder="Password" required>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <input type="password" id="inputPassword" name="confirm_password" class="form-control" placeholder=" Confirm Password" >
+  <label for="inputSPassword" class="sr-only">Password</label>
+  <input type="password"  id="inputSPassword" name="SPassword" class="form-control" placeholder="Password" required>
+  <label for="inputSConfirmPassword" class="sr-only">Confirm Password</label>
+  <input type="password" id="inputSConfirmPassword" name="SConfirmPassword" class="form-control" placeholder=" Confirm Password" >
   
   <button class="btn btn-lg btn-success btn-block" name="submit" type="submit">Register</button>
   <p class="mt-5 mb-3 text-muted">&copy; 2021-2023</p>

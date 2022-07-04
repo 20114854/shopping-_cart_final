@@ -6,12 +6,14 @@ if (isset($_POST['submit'])) {
    //Connect to database
     require "conn.php";
 
+    $usernumber = $_POST['StudNum'];
     $username = $_POST['StudName'];
     $password = $_POST['SPassword'];
     $confirm_password = $_POST['SConfirmPassword'];
+    $useremail = $_POST['Semail'];
 
     //Error handles
-    if (empty($username) || empty($password) || empty($confirm_password)) {
+    if (empty($username) || empty($password) || empty($confirm_password || empty($usernumber) || empty($useremail))) {
        header("Location:../register.php?error=emptyfields&username=".$username);
        exit();
 
@@ -24,7 +26,7 @@ if (isset($_POST['submit'])) {
     }elseif ($password !== $confirm_password) {
         header("Location:../register.php?error=passworddonotmatch&username".$usename);
         exit();   
-        //check if the username i taken or not
+        //check if the username is taken or not
     }else {
         $sql = "SELECT StudName FROM tbluser WHERE StudName = ?";
         $stmt = mysqli_stmt_init($conn);
@@ -41,7 +43,7 @@ if (isset($_POST['submit'])) {
                 exit();
                 // insert data into the database
             }else {
-                $sql = " INSERT INTO tbluser (StudName, SPassword) values (?,?)";
+                $sql = " INSERT INTO tbluser (StudName, SPassword, SConfirmPassword, StudNum, Semail) values ('$username','$password','$confirm_password','$usernumber','$useremail')";
                 $stmt = mysqli_stmt_init($conn);
                if (!mysqli_stmt_prepare($stmt, $sql)) {
                 header("Location:../register.php?error=sqlerror");
@@ -49,7 +51,7 @@ if (isset($_POST['submit'])) {
                 //create a hashed password
                }else {
                    $hashedPass = password_hash($password, PASSWORD_DEFAULT);
-                   mysqli_stmt_bind_param($stmt, "ss" , $username, $hashedPass);
+                   mysqli_stmt_bind_param($stmt,"ss",$username, $hashedPass);
                    mysqli_stmt_execute($stmt);
                     header("Location:../login.php?succes=registered");
                }
